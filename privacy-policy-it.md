@@ -4,11 +4,6 @@
 **Contatto privacy e assistenza:** asorstudio.contact@gmail.com  
 **Data di entrata in vigore:** 1 ottobre 2026
 
-**Stato: bozza da completare prima della pubblicazione.** Confermare l’identità
-completa e l’indirizzo del titolare, le basi giuridiche, i tempi di conservazione
-dei dati gestiti per assistenza e acquisti e le garanzie per trasferimenti fuori
-dallo SEE. Pubblicare poi a un URL HTTPS stabile e aggiornare la data di efficacia.
-
 ## Principio local-first
 
 Movelory non richiede un account e conserva nella memoria privata del

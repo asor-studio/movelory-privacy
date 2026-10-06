@@ -9,8 +9,6 @@ The policy explains how Movelory handles your information, including location, p
 - [Italiano](index.html)
 - [English](en.html)
 
-The policy is currently a draft and will be completed before the app is published.
-
 ## Contact
 
 For privacy questions or support, contact [asorstudio.contact@gmail.com](mailto:asorstudio.contact@gmail.com).
