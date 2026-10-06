@@ -38,6 +38,18 @@ richiesta. Movelory non invia automaticamente a tali servizi l’archivio, le
 foto, i video o la traccia GPS completa. Il trattamento dei servizi terzi è
 regolato dalle rispettive privacy policy e condizioni d’uso.
 
+Per il calcolo dei percorsi Movelory utilizza il server pubblico OSRM
+`router.project-osrm.org`, gestito da FOSSGIS. Il server riceve le coordinate
+di partenza e destinazione, insieme all’indirizzo IP e ai dati tecnici della
+richiesta. Il gestore dichiara che le richieste di percorso vengono registrate
+nei log del server. La conservazione e la cancellazione di questi dati sono
+disciplinate dal gestore; Movelory non controlla tali registri.
+
+Riferimenti OSRM / FOSSGIS:
+- [Informativa privacy (in tedesco)](https://www.fossgis.de/datenschutzerkl%C3%A4rung)
+- [Condizioni di utilizzo (in tedesco)](https://www.fossgis.de/arbeitsgruppen/osm-server/nutzungsbedingungen/)
+- [Informazioni sul servizio (in inglese)](https://routing.openstreetmap.de/about.html)
+
 L'inserimento manuale di latitudine e longitudine è elaborato localmente e non
 genera richieste a Google Places. La visualizzazione dell'area corrispondente
 continua a usare Google Maps.
