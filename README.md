@@ -11,8 +11,8 @@ The policy explains how Movelory handles your information, including location, p
 
 ## Terms of use
 
-- [Italiano](terms.html)
-- [English](terms-en.html)
+- [Italiano](terms-it.html)
+- [English](terms.html)
 
 The terms cover Free and Premium features, subscription renewal and cancellation, your content and support.
 
