@@ -6,8 +6,8 @@ The policy explains how Movelory handles your information, including location, p
 
 ## Read the policy
 
-- [Italiano](index.html)
-- [English](en.html)
+- [Italiano](it.html)
+- [English](index.html)
 
 ## Terms of use
 
