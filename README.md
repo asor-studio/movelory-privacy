@@ -9,6 +9,13 @@ The policy explains how Movelory handles your information, including location, p
 - [Italiano](index.html)
 - [English](en.html)
 
+## Terms of use
+
+- [Italiano](terms.html)
+- [English](terms-en.html)
+
+The terms cover Free and Premium features, subscription renewal and cancellation, your content and support.
+
 ## Contact
 
 For privacy questions or support, contact [asorstudio.contact@gmail.com](mailto:asorstudio.contact@gmail.com).
