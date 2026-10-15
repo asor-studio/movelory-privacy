@@ -105,3 +105,46 @@ Puoi presentare reclamo al Garante per la protezione dei dati personali o
 all’autorità di controllo competente. Per i dati conservati dai fornitori,
 la richiesta sarà gestita secondo i rispettivi ruoli e obblighi; eliminare
 l’archivio locale non elimina automaticamente i dati delle transazioni.
+
+
+**Ultima revisione: 15 ottobre 2026.**
+
+## Finalità e basi giuridiche
+
+Il titolare è una persona fisica che presenta il progetto con il nickname robrosc, contattabile a asorstudio.contact@gmail.com. Non è richiesto un account Movelory.
+
+Le operazioni strettamente necessarie a fornire le funzioni richieste — diario locale, registrazione del viaggio avviata dall’utente, mappe, ricerca e calcolo del percorso, verifica degli acquisti e applicazione delle quote — sono effettuate per eseguire il servizio richiesto, ai sensi dell’art. 6, par. 1, lett. b), GDPR. Le funzioni opzionali si attivano quando le scegli; il mancato conferimento dei dati necessari impedisce quella funzione, senza rendere obbligatorio l’uso delle altre.
+
+Le richieste di assistenza relative al servizio sono trattate per dare esecuzione alla richiesta (art. 6, par. 1, lett. b). La gestione delle richieste sui diritti privacy e degli obblighi di legge si fonda sull’art. 6, par. 1, lett. c). Gli eventuali obblighi fiscali si applicano soltanto nei casi previsti dalla legge.
+
+La diagnostica tecnica locale e l’eventuale conservazione strettamente necessaria per accertare o difendere un diritto si fondano sul legittimo interesse alla sicurezza e al funzionamento del servizio o alla tutela dei diritti (art. 6, par. 1, lett. f), nei limiti necessari e dopo il bilanciamento con i tuoi diritti. Non inviare all’assistenza dati particolari o contenuti di altre persone non necessari.
+
+I permessi del sistema operativo sono controlli tecnici e non costituiscono, da soli, un consenso GDPR. Non sono previsti marketing o tracciamento pubblicitario. Un eventuale futuro trattamento basato sul consenso richiederà una scelta specifica, informata e revocabile.
+
+## Conservazione e cancellazione
+
+L’archivio locale resta fino alla cancellazione da parte dell’utente. Il comando di cancellazione rimuove profilo, mezzi, viaggi, ricordi, recap e diagnostica gestiti dall’app; non rimuove gli originali nella galleria, le copie già condivise con altre app o i dati conservati dai fornitori. Eventuali backup o copie gestite dal sistema operativo vanno controllati nelle impostazioni del dispositivo.
+
+Per la quota Pro viene conservata localmente la data iniziale del periodo di abbonamento e il numero di storie create, senza nomi, foto o coordinate. Questo contatore non viene inviato a un server Movelory e non viene azzerato dalla cancellazione dell’archivio. Le registrazioni dei periodi precedenti non hanno attualmente una scadenza automatica: restano fino alla cancellazione dei dati dell’app tramite il sistema operativo o alla disinstallazione, fatti salvi eventuali ripristini del sistema.
+
+Il registro diagnostico locale viene ridotto automaticamente quando raggiunge circa 256 KiB e può essere cancellato dall’app; la rotazione dipende dalle dimensioni e non da una scadenza temporale.
+
+Le comunicazioni di assistenza sono conservate per gestire e chiudere la richiesta; le copie non più necessarie devono essere eliminate. Un’ulteriore conservazione è limitata agli elementi necessari per obblighi di legge o per una controversia concreta e alla durata del relativo obbligo o termine applicabile. Le richieste privacy e le relative risposte sono conservate nella misura necessaria a dimostrare la gestione della richiesta.
+
+I dati degli abbonamenti trattati per conto del titolare sono conservati nella misura necessaria a verificare e gestire acquisti, rinnovi, ripristini e contestazioni, e per gli obblighi applicabili. Puoi richiederne la cancellazione al contatto privacy; saranno verificati i dati eliminabili e quelli da conservare con la relativa motivazione. Gli store e gli altri titolari autonomi applicano anche propri obblighi e criteri di conservazione.
+
+## Fornitori e trasferimenti internazionali
+
+RevenueCat tratta i dati degli utenti dell’app come responsabile per il servizio di verifica degli abbonamenti, secondo il proprio accordo sul trattamento dei dati (DPA). Google, Apple e il gestore del servizio OSRM trattano i dati secondo i ruoli previsti dalle condizioni applicabili ai rispettivi servizi. Il rinvio alle informative dei fornitori non sostituisce gli obblighi del titolare per i trattamenti di propria competenza.
+
+L’utilizzo di RevenueCat, dei servizi Google e Apple e dell’email di assistenza può comportare trattamenti fuori dallo Spazio economico europeo, inclusi gli Stati Uniti. Per i trasferimenti soggetti al GDPR sono necessarie una decisione di adeguatezza applicabile o garanzie appropriate, come le clausole contrattuali standard e le eventuali misure supplementari. Il DPA di RevenueCat prevede clausole contrattuali standard per i trasferimenti pertinenti. Non si presume che ogni trasferimento sia coperto da una decisione di adeguatezza.
+
+Puoi chiedere al contatto privacy informazioni sulle garanzie applicabili ai tuoi dati e come ottenerne copia. Le richieste inviate via email comportano il trattamento di indirizzo, messaggio e allegati da parte del servizio di posta utilizzato; invia solo quanto necessario.
+
+## Come esercitare i diritti
+
+Scrivi a asorstudio.contact@gmail.com indicando la richiesta. Non inviare documenti di identità in anticipo: ulteriori elementi saranno richiesti solo se necessari e proporzionati per verificare l’identità o individuare i dati. Normalmente riceverai risposta entro un mese; eventuali proroghe nei casi previsti dal GDPR saranno comunicate entro quel termine con la motivazione.
+
+Il titolare non dispone dell’archivio sul tuo dispositivo e non può consultarlo da remoto. La mancanza di un pulsante di esportazione non esclude i diritti applicabili: puoi chiedere indicazioni e assistenza per accesso e portabilità nei casi previsti dagli artt. 15 e 20 GDPR. Non inviare l’intero diario per una richiesta che non lo richiede.
+
+Puoi opporti ai trattamenti basati sul legittimo interesse. Non sono effettuate decisioni unicamente automatizzate che producano effetti giuridici o analogamente significativi ai sensi dell’art. 22 GDPR. La verifica automatica degli abbonamenti serve a rendere disponibili le funzioni acquistate; per errori puoi contattare l’assistenza.
