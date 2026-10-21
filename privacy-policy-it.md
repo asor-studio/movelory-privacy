@@ -16,7 +16,7 @@ sono trattati separatamente tramite RevenueCat e lo store.
 
 - nome e immagine del profilo;
 - informazioni sui mezzi;
-- posizione e tracce GPS registrate durante i viaggi;
+- posizione, data e orario dei punti GPS registrati durante i viaggi, con precisione, velocità e direzione quando disponibili;
 - foto, video, note e altri ricordi scelti dall’utente;
 - video recap generati localmente;
 - un registro diagnostico locale limitato agli errori tecnici.
@@ -29,64 +29,45 @@ dati tramite il sistema operativo o disinstalla Movelory.
 Quando l’utente apre o interroga una mappa, Movelory effettua richieste HTTPS a:
 
 - Google Maps, per visualizzare le aree della mappa;
-- Google Places, per cercare luoghi usando il testo e il contesto geografico,
-  quando l'abbonamento Premium è attivo;
-- OSRM, per calcolare un percorso usando coordinate di partenza e destinazione.
+- Google Places, per cercare luoghi usando il testo e il contesto geografico, quando l’abbonamento Premium è attivo.
 
-Questi gestori possono ricevere l’indirizzo IP e i dati tecnici necessari alla
-richiesta. Movelory non invia automaticamente a tali servizi l’archivio, le
-foto, i video o la traccia GPS completa. Il trattamento dei servizi terzi è
-regolato dalle rispettive privacy policy e condizioni d’uso.
+Questi gestori possono ricevere l’indirizzo IP e i dati tecnici necessari alla richiesta. Movelory non invia automaticamente a tali servizi l’archivio, le foto, i video o la traccia GPS completa. Il trattamento dei servizi terzi è regolato dalle rispettive privacy policy e condizioni d’uso.
 
-Per il calcolo dei percorsi Movelory utilizza il server pubblico OSRM
-`router.project-osrm.org`, gestito da FOSSGIS. Il server riceve le coordinate
-di partenza e destinazione, insieme all’indirizzo IP e ai dati tecnici della
-richiesta. Il gestore dichiara che le richieste di percorso vengono registrate
-nei log del server. La conservazione e la cancellazione di questi dati sono
-disciplinate dal gestore; Movelory non controlla tali registri.
+La distanza dei viaggi è calcolata localmente dalla traccia GPS registrata. Non vengono richiesti percorsi stradali a servizi di routing esterni e, per i viaggi senza traccia GPS, non viene stimata la distanza stradale tra i ricordi.
 
-Riferimenti OSRM / FOSSGIS:
-- [Informativa privacy (in tedesco)](https://www.fossgis.de/datenschutzerkl%C3%A4rung)
-- [Condizioni di utilizzo (in tedesco)](https://www.fossgis.de/arbeitsgruppen/osm-server/nutzungsbedingungen/)
-- [Informazioni sul servizio (in inglese)](https://routing.openstreetmap.de/about.html)
+Il viaggio di esempio usa una traccia illustrativa con coordinate statiche incluse nell’app: per crearla non viene richiesta la posizione del dispositivo. La visualizzazione della mappa continua a usare Google Maps.
 
-L'inserimento manuale di latitudine e longitudine è elaborato localmente e non
-genera richieste a Google Places. La visualizzazione dell'area corrispondente
-continua a usare Google Maps.
+L’inserimento manuale di latitudine e longitudine è elaborato localmente e non genera richieste a Google Places. La visualizzazione dell’area corrispondente continua a usare Google Maps.
 
 ## Abbonamenti
 
-Quando il servizio abbonamenti è configurato, RevenueCat e Google Play o Apple
-App Store verificano acquisti, rinnovi, scadenze, rimborsi e ripristini. RevenueCat
-riceve un identificativo pseudonimo dell'installazione/cliente, dati delle
-transazioni e informazioni tecniche necessarie alla verifica. Queste verifiche
-possono avvenire all'avvio, al ritorno nell'app e durante l'uso delle funzioni
-Premium. Movelory non invia a RevenueCat foto, viaggi, tracce GPS o coordinate.
-Non sono abilitate la raccolta opzionale di identificatori pubblicitari né la
-diagnostica opzionale dell'SDK.
+Quando il servizio abbonamenti è configurato, RevenueCat e Google Play o Apple App Store verificano acquisti, rinnovi, scadenze, rimborsi e ripristini. RevenueCat riceve un identificativo pseudonimo dell’installazione/cliente, dati delle transazioni e informazioni tecniche necessarie alla verifica. Queste verifiche possono avvenire all’avvio, al ritorno nell’app e durante l’uso delle funzioni Pro o Premium. Movelory non invia a RevenueCat foto, viaggi, tracce GPS o coordinate. Non sono abilitate la raccolta opzionale di identificatori pubblicitari né la diagnostica opzionale dell’SDK.
 
-Il pagamento è gestito dallo store; Movelory non raccoglie i dati della carta.
-Il ripristino usa l'account dello store e non richiede un account Movelory.
-La cancellazione dei dati locali non elimina i dati delle transazioni conservati
-dai fornitori e non annulla l'abbonamento. Il rinnovo si gestisce nelle
-impostazioni abbonamenti dello store. Per richieste relative ai dati degli
-abbonamenti è disponibile il contatto privacy sopra indicato.
+Il pagamento è gestito dallo store; Movelory non raccoglie i dati della carta. Il ripristino usa l’account dello store e non richiede un account Movelory.
+
+Per applicare la quota Pro, il dispositivo conserva la data iniziale del periodo di abbonamento e il numero di storie create. Questo contatore non contiene nomi, foto o coordinate e non viene inviato a un server Movelory. La cancellazione dell’archivio dall’app non azzera la quota già utilizzata nel periodo.
+
+La cancellazione dei dati locali non elimina i dati delle transazioni conservati dai fornitori e non annulla l’abbonamento. Il rinnovo si gestisce nelle impostazioni abbonamenti dello store. Per richieste relative ai dati degli abbonamenti è disponibile il contatto privacy sopra indicato.
 
 Riferimento: [Privacy policy RevenueCat](https://www.revenuecat.com/privacy/).
 
 ## Permessi
 
-La posizione in background viene usata soltanto durante un viaggio avviato
-dall’utente, per continuare a registrare il percorso quando l’app è chiusa o
-non in uso. Fotocamera e microfono vengono attivati soltanto quando l’utente
-sceglie di creare un contenuto. Le notifiche mostrano lo stato del viaggio o di
-una generazione video in corso.
+La posizione viene registrata soltanto durante un viaggio avviato dall’utente. Su Android il viaggio attivo usa un servizio con notifica persistente per continuare a registrare il percorso anche quando l’app è in background, lo schermo è spento o l’app viene rimossa dalle recenti, nei limiti dei permessi e delle restrizioni del sistema operativo. La registrazione e il calcolo dei chilometri avvengono sul dispositivo.
+
+Il comando Pausa sospende il salvataggio di nuovi punti della traccia; il comando Termina arresta la registrazione. Cambiare schermata non annulla la pausa. Puoi modificare o revocare i permessi di posizione nelle impostazioni del dispositivo; senza i permessi necessari il tracciamento non è disponibile o viene interrotto.
+
+Fotocamera e microfono vengono attivati soltanto quando scegli di creare un contenuto. Le notifiche mostrano lo stato del viaggio o di una generazione video in corso.
+
+Durante un viaggio puoi salvare un ricordo rapido dalla mappa o dalla notifica: vengono conservati localmente posizione e orario, da completare in seguito.
+
+La bolla opzionale richiede l’autorizzazione Android a mostrare contenuti sopra le altre app. Serve soltanto come pulsante per salvare un ricordo e non legge il contenuto delle altre app. Puoi disattivarla dal Profilo, dal menu del ricordo rapido o tenendola premuta; scompare quando termina il viaggio.
 
 ## Diagnostica
 
-Gli errori imprevisti sono registrati in un piccolo file locale. Il file non
-viene trasmesso automaticamente e può essere esportato volontariamente o
-cancellato dall’utente nella sezione “Privacy e dati”.
+Gli errori imprevisti sono registrati in un piccolo file locale. Il file non viene trasmesso automaticamente e può essere esportato volontariamente o cancellato dall’utente nella sezione “Privacy e dati”.
+
+I nuovi eventi diagnostici conservano data, categoria tecnica dell’errore e nomi delle funzioni nello stack. Il messaggio dell’eccezione, gli URL e i percorsi dei file non vengono salvati.
 
 ## Diritti e contatti
 
@@ -107,13 +88,13 @@ la richiesta sarà gestita secondo i rispettivi ruoli e obblighi; eliminare
 l’archivio locale non elimina automaticamente i dati delle transazioni.
 
 
-**Ultima revisione: 15 ottobre 2026.**
+**Ultima revisione: 21 ottobre 2026.**
 
 ## Finalità e basi giuridiche
 
 Il titolare è una persona fisica che presenta il progetto con il nickname robrosc, contattabile a asorstudio.contact@gmail.com. Non è richiesto un account Movelory.
 
-Le operazioni strettamente necessarie a fornire le funzioni richieste — diario locale, registrazione del viaggio avviata dall’utente, mappe, ricerca e calcolo del percorso, verifica degli acquisti e applicazione delle quote — sono effettuate per eseguire il servizio richiesto, ai sensi dell’art. 6, par. 1, lett. b), GDPR. Le funzioni opzionali si attivano quando le scegli; il mancato conferimento dei dati necessari impedisce quella funzione, senza rendere obbligatorio l’uso delle altre.
+Le operazioni strettamente necessarie a fornire le funzioni richieste — diario locale, registrazione del viaggio avviata dall’utente, mappe, ricerca dei luoghi e calcolo locale della distanza, verifica degli acquisti e applicazione delle quote — sono effettuate per eseguire il servizio richiesto, ai sensi dell’art. 6, par. 1, lett. b), GDPR. Le funzioni opzionali si attivano quando le scegli; il mancato conferimento dei dati necessari impedisce quella funzione, senza rendere obbligatorio l’uso delle altre.
 
 Le richieste di assistenza relative al servizio sono trattate per dare esecuzione alla richiesta (art. 6, par. 1, lett. b). La gestione delle richieste sui diritti privacy e degli obblighi di legge si fonda sull’art. 6, par. 1, lett. c). Gli eventuali obblighi fiscali si applicano soltanto nei casi previsti dalla legge.
 
@@ -123,7 +104,7 @@ I permessi del sistema operativo sono controlli tecnici e non costituiscono, da 
 
 ## Conservazione e cancellazione
 
-L’archivio locale resta fino alla cancellazione da parte dell’utente. Il comando di cancellazione rimuove profilo, mezzi, viaggi, ricordi, recap e diagnostica gestiti dall’app; non rimuove gli originali nella galleria, le copie già condivise con altre app o i dati conservati dai fornitori. Eventuali backup o copie gestite dal sistema operativo vanno controllati nelle impostazioni del dispositivo.
+L’archivio locale resta fino alla cancellazione da parte dell’utente. Il comando di cancellazione rimuove profilo, mezzi, viaggi e relative tracce GPS, ricordi, recap e diagnostica gestiti dall’app; non rimuove gli originali nella galleria, le copie già condivise con altre app o i dati conservati dai fornitori. Eventuali backup o copie gestite dal sistema operativo vanno controllati nelle impostazioni del dispositivo.
 
 Per la quota Pro viene conservata localmente la data iniziale del periodo di abbonamento e il numero di storie create, senza nomi, foto o coordinate. Questo contatore non viene inviato a un server Movelory e non viene azzerato dalla cancellazione dell’archivio. Le registrazioni dei periodi precedenti non hanno attualmente una scadenza automatica: restano fino alla cancellazione dei dati dell’app tramite il sistema operativo o alla disinstallazione, fatti salvi eventuali ripristini del sistema.
 
@@ -135,7 +116,7 @@ I dati degli abbonamenti trattati per conto del titolare sono conservati nella m
 
 ## Fornitori e trasferimenti internazionali
 
-RevenueCat tratta i dati degli utenti dell’app come responsabile per il servizio di verifica degli abbonamenti, secondo il proprio accordo sul trattamento dei dati (DPA). Google, Apple e il gestore del servizio OSRM trattano i dati secondo i ruoli previsti dalle condizioni applicabili ai rispettivi servizi. Il rinvio alle informative dei fornitori non sostituisce gli obblighi del titolare per i trattamenti di propria competenza.
+RevenueCat tratta i dati degli utenti dell’app come responsabile per il servizio di verifica degli abbonamenti, secondo il proprio accordo sul trattamento dei dati (DPA). Google e Apple trattano i dati secondo i ruoli previsti dalle condizioni applicabili ai rispettivi servizi. Il rinvio alle informative dei fornitori non sostituisce gli obblighi del titolare per i trattamenti di propria competenza.
 
 L’utilizzo di RevenueCat, dei servizi Google e Apple e dell’email di assistenza può comportare trattamenti fuori dallo Spazio economico europeo, inclusi gli Stati Uniti. Per i trasferimenti soggetti al GDPR sono necessarie una decisione di adeguatezza applicabile o garanzie appropriate, come le clausole contrattuali standard e le eventuali misure supplementari. Il DPA di RevenueCat prevede clausole contrattuali standard per i trasferimenti pertinenti. Non si presume che ogni trasferimento sia coperto da una decisione di adeguatezza.
 
