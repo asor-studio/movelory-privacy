@@ -1,0 +1,11 @@
+/* Video surfaces share the privacy site's typography, palette and layout. */
+.walkthrough{margin:24px 0 16px}
+.phone-frame{position:relative;width:min(100%,340px);padding:10px;background:#24282d;border-radius:38px;box-shadow:0 14px 32px rgb(45 49 54 / .18)}
+.phone-frame::before,.phone-frame::after{content:"";position:absolute;width:3px;background:#24282d;border-radius:3px}
+.phone-frame::before{left:-3px;top:106px;height:52px}
+.phone-frame::after{right:-3px;top:136px;height:68px}
+.walkthrough video{display:block;width:100%;height:auto;aspect-ratio:9/20;background:var(--ink);border-radius:28px}
+.walkthrough video:focus-visible{outline:3px solid var(--accent);outline-offset:5px}
+.walkthrough figcaption{max-width:65ch;margin-top:12px;font-size:14px;color:var(--muted)}
+@media(max-width:360px){.phone-frame{padding:8px;border-radius:32px}.walkthrough video{border-radius:24px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
