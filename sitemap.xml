@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='utf-8'?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://asor-studio.github.io/movelory-privacy/app-it.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asor-studio.github.io/movelory-privacy/app.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://asor-studio.github.io/movelory-privacy/app-it.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asor-studio.github.io/movelory-privacy/app.html" />
+  </url>
+  <url>
+    <loc>https://asor-studio.github.io/movelory-privacy/app.html</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://asor-studio.github.io/movelory-privacy/app.html" />
+    <xhtml:link rel="alternate" hreflang="it" href="https://asor-studio.github.io/movelory-privacy/app-it.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asor-studio.github.io/movelory-privacy/app.html" />
+  </url>
+  <url>
+    <loc>https://asor-studio.github.io/movelory-privacy/cookies-it.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://asor-studio.github.io/movelory-privacy/cookies-it.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://asor-studio.github.io/movelory-privacy/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asor-studio.github.io/movelory-privacy/cookies.html" />
+  </url>
+  <url>
+    <loc>https://asor-studio.github.io/movelory-privacy/cookies.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://asor-studio.github.io/movelory-privacy/cookies-it.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://asor-studio.github.io/movelory-privacy/cookies.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asor-studio.github.io/movelory-privacy/cookies.html" />
+  </url>
+  <url>
+    <loc>https://asor-studio.github.io/movelory-privacy/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://asor-studio.github.io/movelory-privacy/it.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://asor-studio.github.io/movelory-privacy/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asor-studio.github.io/movelory-privacy/index.html" />
+  </url>
+  <url>
+    <loc>https://asor-studio.github.io/movelory-privacy/it.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://asor-studio.github.io/movelory-privacy/it.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://asor-studio.github.io/movelory-privacy/index.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asor-studio.github.io/movelory-privacy/index.html" />
+  </url>
+  <url>
+    <loc>https://asor-studio.github.io/movelory-privacy/terms-it.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://asor-studio.github.io/movelory-privacy/terms-it.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://asor-studio.github.io/movelory-privacy/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asor-studio.github.io/movelory-privacy/terms.html" />
+  </url>
+  <url>
+    <loc>https://asor-studio.github.io/movelory-privacy/terms.html</loc>
+    <xhtml:link rel="alternate" hreflang="it" href="https://asor-studio.github.io/movelory-privacy/terms-it.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://asor-studio.github.io/movelory-privacy/terms.html" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://asor-studio.github.io/movelory-privacy/terms.html" />
+  </url>
+</urlset>

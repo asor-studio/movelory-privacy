@@ -10,6 +10,8 @@ foreach ($file in Get-ChildItem -LiteralPath $root -Filter '*.html') {
     @(@('app.html', 'Discover Movelory'), @('index.html', 'Privacy policy'), @('terms.html', 'Terms of use'), @('location-demo.html', 'GPS recording'), @('recap-demo.html', 'Recap Studio'), @('cookies.html', 'Cookie information'))
   }
   $canonical = [regex]::Match($html, '<link rel="canonical" href="([^"]+)"').Groups[1].Value
+  # SEO metadata uses absolute public URLs; navigation still uses local filenames.
+  $canonical = ($canonical -split '[?#]')[0].TrimEnd('/').Split('/')[-1]
   $label = if ($italian) { 'Menu principale' } else { 'Main navigation' }
   $items = foreach ($page in $pages) {
     $current = if ($page[0] -eq $canonical) { ' aria-current="page"' } else { '' }

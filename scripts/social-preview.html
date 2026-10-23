@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1200, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Movelory · Social preview source</title>
+  <style>
+    @font-face{font-family:Geist;src:url('../assets/Geist-Variable.ttf');font-weight:100 900}
+    *{box-sizing:border-box}body{margin:0;width:1200px;height:630px;overflow:hidden;background:#f8f4ec;color:#2d3136;font-family:Geist,Arial,sans-serif}
+    .card{position:relative;width:1200px;height:630px;padding:62px 68px;display:flex;align-items:center;gap:60px}
+    .copy{flex:1;position:relative;z-index:1}.brand{display:flex;align-items:center;gap:14px;font-size:34px;font-weight:800;letter-spacing:-1px;margin-bottom:48px}.brand img{width:58px;height:58px;border-radius:14px}
+    .eyebrow{margin:0 0 16px;color:#b94700;font-size:15px;font-weight:700;letter-spacing:3px;text-transform:uppercase}h1{font-size:59px;line-height:1.08;letter-spacing:-2.5px;font-weight:800;margin:0 0 24px;max-width:640px}
+    .description{font-size:23px;line-height:1.5;color:#59616d;max-width:570px;margin:0}.features{font-size:16px;color:#b94700;margin:30px 0 0;font-weight:600}
+    .poster{position:relative;z-index:1;flex-shrink:0;width:296px;height:526px;object-fit:contain;border-radius:18px;box-shadow:0 18px 48px #2d313622}
+    .circle{position:absolute;width:660px;height:660px;right:-190px;top:70px;border:1px solid #e7c9b3;border-radius:50%}.circle::after{content:'';position:absolute;inset:40px;border:1px solid #e7c9b3;border-radius:50%}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="circle" aria-hidden="true"></div>
+    <div class="copy"><div class="brand"><img src="../assets/app-icon.png" alt="">Movelory</div><p class="eyebrow">Your travel diary</p><h1>Every journey<br>deserves a story.</h1><p class="description">Keep your routes, photos and memories.<br>Relive your travels with Recap Studio.</p><p class="features">Journeys · Maps · Memories · Video stories</p></div>
+    <img class="poster" src="../assets/promotional/en/01_home.webp" alt="Movelory app">
+  </main>
+  <script>
+    if(new URLSearchParams(location.search).get('lang')==='it'){
+      document.documentElement.lang='it';
+      document.querySelector('.eyebrow').textContent='Il tuo diario di viaggio';
+      document.querySelector('h1').innerHTML='Ogni viaggio<br>merita una storia.';
+      document.querySelector('.description').innerHTML='Custodisci percorsi, foto e ricordi.<br>Rivivi i tuoi viaggi con Recap Studio.';
+      document.querySelector('.features').textContent='Viaggi · Mappe · Ricordi · Racconti video';
+      document.querySelector('.poster').src='../assets/promotional/it/01_home.webp';
+    }
+  </script>
+</body>
+</html>

@@ -43,6 +43,16 @@ Every page includes the same main navigation, with links in the selected languag
 
 To update the shared main navigation after changing its labels or destinations, edit and run `scripts/update-navigation.ps1` with PowerShell. Generated links are saved directly in the HTML, so navigation works without a build step or JavaScript.
 
+## Search and social sharing
+
+All root HTML pages include static Open Graph and Twitter/X large-image metadata, localized titles, descriptions, image alternative text and absolute public canonical and language URLs. Social preview images are `assets/social/movelory-en.png` and `assets/social/movelory-it.png` (1200 × 630), built from the app icon and existing promotional images. Crawlers can read this metadata without JavaScript.
+
+Run `python scripts/update-seo.py` after changing titles or descriptions. The default public base URL is `https://asor-studio.github.io/movelory-privacy/`; pass `--base-url https://example.com/path/` if hosting changes. The command also updates `sitemap.xml`, excluding duplicate English aliases and demo pages marked `noindex`, and writes a `robots.txt` template. On GitHub project Pages, the repository's `robots.txt` is served below the project path; only a domain-root `robots.txt` controls crawlers. The sitemap can be submitted separately to a search engine.
+
+To rebuild share images, run `node scripts/render-social-previews.cjs` with Playwright available. Optional environment variables `PLAYWRIGHT_MODULE` and `CHROMIUM_EXECUTABLE` select an installed module and browser. The editable image layout is `scripts/social-preview.html`; it is a rendering source, not a public content page.
+
+Publish both the HTML and image files before testing actual social previews. Preview services may cache earlier metadata and images; local files and localhost links cannot be fetched by public social crawlers. Individual platforms control the final card layout.
+
 ## Contact
 
 For privacy questions or support, contact [asorstudio.contact@gmail.com](mailto:asorstudio.contact@gmail.com).
@@ -51,6 +61,10 @@ For privacy questions or support, contact [asorstudio.contact@gmail.com](mailto:
 
 Copyright © 2026 robrosc. All rights reserved.
 
-This repository is publicly available so that people can read Movelory’s privacy information. Its original content and design are proprietary. Reuse requires written permission, except where allowed by law or the terms of the hosting platform. See [LICENSE](LICENSE) for details.
+This repository publishes Movelory’s information website, legal pages and promotional materials. It does not contain the Flutter application's source project. Its original code, design, text and media are proprietary to the extent owned by robrosc. Public visibility is not an open-source license or permission to republish, adapt or reuse these materials. Reuse requires written permission, except where allowed by law or the applicable GitHub terms. See [LICENSE](LICENSE) for details.
+
+Public repositories can be read and downloaded, and GitHub's terms permit viewing and forking through its service. The proprietary license reserves rights outside those permissions; it does not technically prevent copying. See [GitHub's licensing guidance](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository).
+
+Public visibility does not grant write access to this repository. Direct pushes and merges require the appropriate repository permissions; a pull request from a fork is a proposed change rather than a change to the published site. See [GitHub's repository roles](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/repository-roles-for-an-organization).
 
 The Geist font belongs to its respective authors and is covered by its own [license](assets/OFL.txt).
