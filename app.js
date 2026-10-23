@@ -44,6 +44,37 @@ if (featureNav && featureGrid && featureCards.length) {
     tabs.append(button);
     return button;
   });
+  const mobileGuide = document.createElement('div');
+  mobileGuide.className = 'feature-mobile-guide';
+  const gestureRow = document.createElement('div');
+  gestureRow.className = 'feature-gesture-row';
+  const swipeHint = document.createElement('p');
+  swipeHint.id = 'feature-swipe-hint';
+  swipeHint.textContent = isItalian ? 'Scorri per esplorare' : 'Swipe to explore';
+  const mobilePrevious = document.createElement('button');
+  const mobileNext = document.createElement('button');
+  mobilePrevious.type = mobileNext.type = 'button';
+  mobilePrevious.textContent = '←';
+  mobileNext.textContent = '→';
+  mobilePrevious.setAttribute('aria-label', isItalian ? 'Schermata precedente' : 'Previous screen');
+  mobileNext.setAttribute('aria-label', isItalian ? 'Schermata successiva' : 'Next screen');
+  mobilePrevious.addEventListener('click', () => selectFeature((selectedIndex - 1 + count) % count));
+  mobileNext.addEventListener('click', () => selectFeature((selectedIndex + 1) % count));
+  gestureRow.append(mobilePrevious, swipeHint, mobileNext);
+  const dots = document.createElement('div');
+  dots.className = 'feature-dots';
+  dots.setAttribute('role', 'group');
+  dots.setAttribute('aria-label', isItalian ? 'Posizione nel carosello' : 'Carousel position');
+  const dotButtons = originalLinks.map((link, index) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.setAttribute('aria-label', `${isItalian ? 'Mostra' : 'Show'} ${index + 1}: ${link.textContent}`);
+    dot.setAttribute('aria-controls', featureCards[index].id);
+    dot.addEventListener('click', () => selectFeature(index));
+    dots.append(dot);
+    return dot;
+  });
+  mobileGuide.append(gestureRow, dots);
   // Copies on both sides make the seam visually identical when we recenter.
   featureCards.forEach((card, index) => { card.dataset.featureIndex = index; });
   function copyCards() {
@@ -75,6 +106,7 @@ if (featureNav && featureGrid && featureCards.length) {
       if ([index, (index + 1) % count, (index - 1 + count) % count].includes(i)) card.querySelector('img').loading = 'eager';
     });
     tabButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
+    dotButtons.forEach((button, i) => button.setAttribute('aria-pressed', String(i === index)));
     originalLinks.forEach((link, i) => {
       if (i === index) link.setAttribute('aria-current', 'location');
       else link.removeAttribute('aria-current');
@@ -164,6 +196,7 @@ if (featureNav && featureGrid && featureCards.length) {
   });
   window.addEventListener('hashchange', selectHash);
   featureNav.before(tabs);
+  featureGrid.before(mobileGuide);
   featureGrid.after(controls);
   document.querySelector('.app-explore').classList.add('app-feature-enhanced');
   selectFeature(0, false, true);
