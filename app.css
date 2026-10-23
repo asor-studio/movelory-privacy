@@ -15,8 +15,12 @@
 .section-intro{margin-bottom:32px;max-width:60ch}
 .section-intro h2{font-size:clamp(30px,4vw,44px);margin:0 0 16px}
 .section-intro>p:last-child{color:var(--muted)}
+.app-contents{position:static;margin-bottom:32px;padding:12px 0;border-block:1px solid var(--line)}
+.app-contents ul{display:flex;flex-wrap:wrap;gap:4px 24px;margin:0;padding:0;list-style:none}
+.app-contents li{margin:0;padding:0}
+.app-contents li a{min-height:48px;padding:10px 4px}
 .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px 24px}
-.feature-card{min-width:0;scroll-margin-top:24px}
+.feature-card{min-width:0}
 .feature-copy{padding:20px 4px 0}
 .feature-copy h3{font-size:21px;line-height:1.35;letter-spacing:-.02em;margin:0 0 12px}
 .feature-copy p{font-size:16px;line-height:1.65;color:var(--muted);margin-bottom:6px}
@@ -36,3 +40,28 @@
 @media(max-width:640px){.feature-card:last-child{display:block}.feature-card:last-child h3{font-size:21px}}
 @media(prefers-reduced-motion:reduce){.poster-link img{transition:none}.poster-link:hover img{transform:none}}
 @media print{.app-main{padding:0}.app-hero{gap:24px}.feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.feature-card{break-inside:avoid}.app-local{padding:16px}.poster-link img{transform:none}}
+
+/* A centered, scrollable carousel with neighboring screens in view. */
+.app-feature-enhanced .app-contents{display:none}
+.feature-tabs{position:relative;display:flex;gap:8px;overflow-x:auto;padding:8px 2px 16px;margin-bottom:16px;scrollbar-width:thin}
+.feature-tabs button,.feature-controls button{flex-shrink:0;min-height:44px;padding:10px 16px;border:1px solid var(--line);border-radius:10px;background:var(--paper);color:var(--ink);font:400 14px/1.5 Geist,Arial,sans-serif;white-space:nowrap;cursor:pointer}
+.feature-tabs button[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:white}
+.feature-tabs button:focus-visible,.feature-controls button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.app-feature-enhanced .feature-grid{--feature-width:min(340px,78vw);position:relative;display:flex;gap:16px;align-items:flex-start;width:100%;max-width:none;margin:0;padding:24px calc((100% - var(--feature-width))/2) 20px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;cursor:grab}
+.app-feature-enhanced .feature-card{flex:0 0 var(--feature-width);min-width:0;display:block;scroll-snap-align:center;transform:scale(.86);transform-origin:center top;opacity:.65;transition:transform .25s ease,opacity .25s ease}
+.app-feature-enhanced .feature-card.is-selected{transform:scale(1);opacity:1}
+.app-feature-enhanced .feature-copy{padding:20px 4px 0;max-width:none}
+.app-feature-enhanced .feature-copy h3{font-size:24px}
+.app-feature-enhanced .feature-copy p{font-size:16px}
+.app-feature-enhanced .poster-link{width:100%;max-width:none;margin:0;box-shadow:0 8px 24px rgb(45 49 54 / .1)}
+.app-feature-enhanced .feature-grid.is-dragging{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.app-feature-enhanced .feature-grid.is-dragging *{cursor:grabbing}
+.app-feature-enhanced .feature-grid,.feature-tabs{scrollbar-width:none;-ms-overflow-style:none}
+.app-feature-enhanced .feature-grid::-webkit-scrollbar,.feature-tabs::-webkit-scrollbar{display:none}
+.app-feature-enhanced .feature-grid:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:12px}
+.feature-controls{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:20px}
+.feature-controls span{color:var(--muted);font-size:14px;text-align:center}
+.feature-controls button:disabled{opacity:.4;cursor:default}
+@media(max-width:640px){.feature-controls{flex-wrap:wrap}.feature-controls span{order:-1;width:100%}.feature-tabs{margin-bottom:8px}.app-feature-enhanced .feature-copy h3{font-size:22px}}
+@media(prefers-reduced-motion:reduce){.app-feature-enhanced .feature-card{transition:none}}
+@media print{.feature-tabs,.feature-controls,.feature-card[data-copy]{display:none}.app-feature-enhanced .feature-grid{display:grid;padding:0;overflow:visible;grid-template-columns:repeat(2,minmax(0,1fr))}.app-feature-enhanced .feature-card{transform:none;opacity:1}}

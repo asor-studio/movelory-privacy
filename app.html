@@ -15,17 +15,19 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="app.css">
   <script src="navigation.js" defer></script>
+  <script src="app.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#contenuto">Skip to the app</a>
   <header class="brand"><a href="index.html" aria-label="Movelory, privacy page"><img class="brand-icon" src="assets/app-icon.png" width="48" height="48" alt="">Movelory<span class="brand-dot" aria-hidden="true"></span></a><span>Every road becomes a story.</span><div class="languages" role="navigation" aria-label="Language"><a href="app.html" lang="en" hreflang="en" aria-current="page">English</a><a href="app-it.html" lang="it" hreflang="it">Italiano</a></div></header>
-  <nav class="site-nav" aria-label="Main navigation"><ul><li><a href="app.html" aria-current="page">Discover Movelory</a></li><li><a href="index.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li><li><a href="location-demo.html">GPS recording</a></li><li><a href="recap-demo.html">Recap Studio</a></li></ul></nav>
+  <nav class="site-nav" aria-label="Main navigation"><details class="site-menu" open><summary><span class="menu-label">Menu</span><span class="menu-current">Discover Movelory</span></summary><div class="menu-panel"><ul><li><a href="app.html" aria-current="page">Discover Movelory</a></li><li><a href="index.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li><li><a href="location-demo.html">GPS recording</a></li><li><a href="recap-demo.html">Recap Studio</a></li><li><a href="cookies.html">Cookie information</a></li></ul><div class="mobile-languages"><div class="languages" role="navigation" aria-label="Language"><a href="app.html" lang="en" hreflang="en" aria-current="page">English</a><a href="app-it.html" lang="it" hreflang="it">Italiano</a></div></div></div></details></nav>
+  <aside class="cookie-notice" aria-label="Cookie information"><p>This portal does not use cookies or tracking tools for its operation or your browsing. <a href="cookies.html">Cookie information</a>.</p><button type="button" class="cookie-close" aria-label="Close cookie notice" hidden>×</button></aside>
   <main class="app-main" id="contenuto" tabindex="-1">
     <section class="app-hero" aria-labelledby="app-title">
       <div class="hero-copy"><p class="eyebrow">Your travel diary</p><h1 id="app-title">Every journey deserves a story.</h1><p class="lead">The road you take. The places you stop. The moments you want to keep. Bring them together in Movelory, from your first departure to the story you revisit at home.</p><div class="app-actions"><a class="button-primary" href="#explore">Explore the app <span aria-hidden="true">↓</span></a><a class="text-link" href="recap-demo.html">Watch Recap Studio <span aria-hidden="true">↗</span></a></div></div>
       <a class="hero-poster poster-link" href="assets/promotional/en/01_home.webp"><img src="assets/promotional/en/01_home.webp" width="941" height="1672" fetchpriority="high" alt="Promotional view of the Movelory home screen with journeys and memories."></a>
     </section>
-    <section class="app-explore" id="explore" aria-labelledby="explore-title"><div class="section-intro"><p class="eyebrow">Movelory</p><h2 id="explore-title">Explore the app</h2><p>Promotional images illustrating the app.</p></div><div class="feature-grid">
+    <section class="app-explore" id="explore" aria-labelledby="explore-title"><div class="section-intro"><p class="eyebrow">Movelory</p><h2 id="explore-title">Explore the app</h2><p>Promotional images illustrating the app.</p></div><nav class="app-contents" aria-label="Explore the features"><details class="page-contents"><summary>Explore the features</summary><div class="contents-panel"><ul><li><a href="#journeys">Journeys</a></li><li><a href="#details">Details</a></li><li><a href="#map">Map</a></li><li><a href="#memories">Memories</a></li><li><a href="#stories">Stories</a></li><li><a href="#trip-story">Journey story</a></li><li><a href="#recap">Recap Studio</a></li></ul></div></details></nav><div class="feature-grid">
       <article class="feature-card" id="journeys">
           <a class="poster-link" href="assets/promotional/en/02_journeys.webp"><img src="assets/promotional/en/02_journeys.webp" width="941" height="1672" loading="lazy" decoding="async" alt="Promotional view of the Movelory journeys screen."></a>
           <div class="feature-copy"><h3>Your adventures, together.</h3><p>Keep your journeys in one place and find the one you want to relive.</p></div>
@@ -51,6 +53,6 @@
     </div></section>
     <section class="app-local" aria-labelledby="local-title"><div><p class="eyebrow">Local-first</p><h2 id="local-title">Your memories, on your device.</h2><p>Movelory keeps your journeys, GPS tracks and memories in your device’s private storage, without requiring a Movelory account. Read the privacy policy for details about maps, permissions and subscription services.</p></div><a class="text-link" href="index.html">Read the privacy policy <span aria-hidden="true">↗</span></a></section>
   </main>
-  <footer><span>Movelory · Discover the app</span><a href="terms.html">Terms of use</a><a href="#contenuto">Back to top</a></footer>
+  <footer><span>Movelory · Discover the app</span><a href="terms.html">Terms of use</a><a href="#contenuto">Back to top</a><a class="cookie-footer" href="cookies.html">Cookie information</a></footer>
 </body>
 </html>
